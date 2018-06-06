@@ -77,7 +77,7 @@ imap <c-e> <esc>$a
 " auto add header
 augroup insertheader
     autocmd!
-    autocmd BufNewFile *.py execute "normal i# -*- coding: utf-8 -*-\n"
+    autocmd BufNewFile *.py 0put =\"# -*- coding: utf-8 -*-\<nl>\"|$
 augroup END
 
 " shortcut to invoke ack search
