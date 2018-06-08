@@ -148,10 +148,10 @@ let g:go_fmt_command = "goimports"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \   'javascript': ['jshint'],
-\   'python': ['flake8', 'pep8'],
+\   'python': ['flake8'],
 \   'go': ['go', 'golint', 'errcheck']
 \}
-let g:syntastic_python_pep8_args = '--max-line-length=100'
+let g:ale_python_flake8_args = '--max-line-length=100'
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
