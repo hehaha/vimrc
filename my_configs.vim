@@ -34,13 +34,6 @@ Plugin 'Valloric/YouCompleteMe'
 " 4 space show a white line
 Plugin 'Yggdroot/indentLine'
 
-" python checker
-Plugin 'vim-scripts/pep8'
-Plugin 'kevinw/pyflakes-vim'
-
-" JS checker
-Plugin 'Shutnik/jshint2.vim'
-
 " vue highlighter
 Plugin 'posva/vim-vue'
 
