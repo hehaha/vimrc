@@ -41,6 +41,9 @@ Plugin 'kevinw/pyflakes-vim'
 " JS checker
 Plugin 'Shutnik/jshint2.vim'
 
+" vue highlighter
+Plugin 'posva/vim-vue'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -141,3 +144,8 @@ endfunction
 map <leader>v :vsplit <c-r>=expand("%:p:h")<cr>/
 map <leader>s :split <c-r>=expand("%:p:h")<cr>/
 map <leader>e :edit <c-r>=expand("%:p:h")<cr>/
+
+" add new file type
+au BufRead,BufNewFile *.vue set filetype=vue
+ " 1 tab == 2 space in js, vue, html, css
+autocmd FileType javascript,html,css,vue setlocal ts=2 sts=2 sw=2
