@@ -151,7 +151,7 @@ let g:ale_linters = {
 \   'python': ['flake8'],
 \   'go': ['go', 'golint', 'errcheck']
 \}
-let g:ale_python_flake8_args = '--max-line-length=100'
+let g:ale_python_flake8_options = '--max-line-length=100'
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 
