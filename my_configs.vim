@@ -142,3 +142,16 @@ map <leader>e :edit <c-r>=expand("%:p:h")<cr>/
 autocmd FileType vue syntax sync fromstart
  " 1 tab == 2 space in js, vue, html, css
 autocmd FileType javascript,html,css,vue setlocal ts=2 sts=2 sw=2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic (syntax checker)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'python': ['flake8'],
+\   'go': ['go', 'golint', 'errcheck'],
+\   'vue': ['tsserver', 'eslint']
+\}
+let g:ale_linter_aliases = {'vue': 'typescript'}
+let g:ale_fixers = {'vue': ['eslint']}
+let g:ale_python_flake8_options = '--max-line-length=100'
